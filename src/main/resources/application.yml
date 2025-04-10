@@ -1,0 +1,30 @@
+server:
+  port: 9080
+
+logging:
+  level:
+    "[org.springframework.security]": TRACE
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  application:
+    name: cropzilla
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        "[format_sql]": true
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: cropzilla-client
+            client-secret: hIQhWlamVYtRPOQzeb2u3g6SseN2DZZS
+            scope: openid,profile,email
+            redirect-uri: http://localhost:9080/login/oauth2/code/keycloak
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/cropzilla-realm
