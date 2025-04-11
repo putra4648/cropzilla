@@ -40,8 +40,3 @@ services:
       - "POSTGRES_USER=admin"
     ports:
       - "3000:5432"
-
-  app:
-    build: .
-    depends_on:
-      - keycloak
