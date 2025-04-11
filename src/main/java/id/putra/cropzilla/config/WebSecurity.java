@@ -33,6 +33,7 @@ public class WebSecurity {
                 .oauth2Login(oauth2 -> {
                     oauth2.loginPage("/oauth2/authorization/keycloak").defaultSuccessUrl("/menu", true);
                 })
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
                 .logout(logout -> logout
                         .logoutSuccessUrl("/") // Redirects to the root URL on successful logout
                         .invalidateHttpSession(true) // Invalidates session to clear session data

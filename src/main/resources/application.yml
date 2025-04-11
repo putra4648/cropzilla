@@ -28,3 +28,6 @@ spring:
         provider:
           keycloak:
             issuer-uri: http://localhost:8080/realms/cropzilla-realm
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/cropzilla-realm/protocol/openid-connect/certs
