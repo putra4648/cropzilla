@@ -42,11 +42,4 @@ public class WebSecurity {
                 );
         return http.build();
     }
-
-    @Bean
-    UserDetailsService userDetailsService() {
-        UserDetails user = User.builder().username("admin").password(passwordEncoder().encode("admin123"))
-                .roles("ADMIN").build();
-        return new InMemoryUserDetailsManager(user);
-    }
 }
