@@ -26,8 +26,20 @@ public class WebSecurity {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(Customizer.withDefaults())
-                .formLogin(Customizer.withDefaults())
-                .authorizeHttpRequests(authorizeRequests -> authorizeRequests.anyRequest().authenticated());
+                .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+                        .requestMatchers("/").permitAll()
+                        .anyRequest()
+                        .authenticated())
+                .oauth2Login(oauth2 -> {
+                    oauth2.loginPage("/oauth2/authorization/keycloak").defaultSuccessUrl("/menu", true);
+                })
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
+                .logout(logout -> logout
+                        .logoutSuccessUrl("/") // Redirects to the root URL on successful logout
+                        .invalidateHttpSession(true) // Invalidates session to clear session data
+                        .clearAuthentication(true) // Clears authentication details
+                        .deleteCookies("JSESSIONID") // Deletes the session cookie
+                );
         return http.build();
     }
 
