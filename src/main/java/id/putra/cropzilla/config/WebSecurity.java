@@ -27,7 +27,7 @@ public class WebSecurity {
         http
                 .csrf(Customizer.withDefaults())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/").permitAll()
+                        .requestMatchers("/", "/static/**", "/webjars/**").permitAll()
                         .anyRequest()
                         .authenticated())
                 .oauth2Login(oauth2 -> {
