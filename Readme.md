@@ -1,11 +1,18 @@
-## Cropzilla
+## Cropzilla [WIP]
 
-This is an e-commerce project that I am working on, here I am implementing various things that I have learned.
+This is a funny e-commerce project themed around selling farmer's goods for Godzilla food. 
 
-This is a fullstack project.
+LOL. 
+
+I will try to apply the Clean Code concept, Effective Java and SOLID principles. 
 
 ### Stack
 - Springboot
-- Keycloack
+- Keycloak
 - Docker
-- 
+- AWS
+
+### Book Resources 
+- Effective Java Third Edition by Joshua Bloch
+- Software Architecture Patterns by Mark Richard
+- Clean Code by Robert C. Martin
