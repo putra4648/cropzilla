@@ -16,3 +16,6 @@ I will try to apply the Clean Code concept, Effective Java and SOLID principles.
 - Effective Java Third Edition by Joshua Bloch
 - Software Architecture Patterns by Mark Richard
 - Clean Code by Robert C. Martin
+
+
+If application doesn't run you can try to run docker manually, then run this app again 
