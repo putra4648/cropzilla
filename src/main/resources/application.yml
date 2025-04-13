@@ -22,7 +22,7 @@ spring:
         registration:
           keycloak:
             client-id: cropzilla-client
-            client-secret: hIQhWlamVYtRPOQzeb2u3g6SseN2DZZS
+            client-secret: MS6JnxzLYnUbvIRxv2GEs6Y3zi1vDwDC
             scope: openid,profile,email
             redirect-uri: http://localhost:9080/login/oauth2/code/keycloak
         provider:
