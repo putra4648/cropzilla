@@ -1,5 +1,5 @@
 server:
-  port: 9080
+  port: 9070
 
 logging:
   level:
@@ -24,9 +24,9 @@ spring:
         registration:
           keycloak:
             client-id: cropzilla-client
-            client-secret: MS6JnxzLYnUbvIRxv2GEs6Y3zi1vDwDC
+            client-secret: XyhE9Xh1wP1SGcwMS3xWQYxBALrBSGk7
             scope: openid,profile,email
-            redirect-uri: http://localhost:9080/login/oauth2/code/keycloak
+            redirect-uri: http://localhost:9070/login/oauth2/code/keycloak
         provider:
           keycloak:
             issuer-uri: http://localhost:8080/realms/cropzilla-realm

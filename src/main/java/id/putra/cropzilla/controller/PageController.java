@@ -16,7 +16,6 @@ public class PageController {
     @GetMapping("/menu")
     public String menu(@AuthenticationPrincipal OidcUser user, Model model) {
         if (user != null) {
-            System.out.println(user);
             model.addAttribute("username", user.getPreferredUsername());
         } else {
             return "redirect:/"; // Redirect to home if not authenticated
