@@ -11,7 +11,7 @@ I will try to apply the Clean Code concept, Effective Java and SOLID principles.
 - Springboot
 - Keycloak
 - Docker
-- AWS
+- AWS (IDK I think I will choose Digital Ocean)
 
 ### Book Resources
 
